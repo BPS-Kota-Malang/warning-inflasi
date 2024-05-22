@@ -3,6 +3,8 @@ import { Spotlight } from './ui/spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
+import CoreSection from './CoreSection'
+
 
 const Hero = () => {
   return (
@@ -38,11 +40,13 @@ const Hero = () => {
             <MagicButton
               title="Mulai Deteksi Inflasi"
               icon={<FaLocationArrow/>}
-              position='right '
+              position='right'
             />
           </a>
         </div>
       </div>
+
+      {/* <CoreSection/> */}
     </div>
   )
 }

@@ -1,43 +1,4 @@
-'use client'
-
-import React from 'react'
-import { useState, useEffect } from 'react';
-import { Spotlight } from './ui/spotlight'
-import { TextGenerateEffect } from './ui/TextGenerateEffect'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
-import Lookerstudio from './Lookerstudio'
-import Dropdown from './Dropdown';
-
-const CoreSection = () => {
-
-/**
- * Define Iframe Source
- */
-  const [iframeSrc, setIframeSrc] = useState('https://lookerstudio.google.com/embed/reporting/3480de0a-2239-41bd-99a3-234ac4703f9d/page/SoLyD');
-  
-  /**Event Handling */
-
-  const handleSelectChange = (event) => {
-    setIframeSrc(event.target.value);
-  };
-
-
-  return (
-    <div  className='pt-10  bg-black'>
-      <div>
-        <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill='white'/>
-        <Spotlight className='top-10 left-full h-[80vh] w-[50vw]' fill='purple'/>
-        <Spotlight className='top-28 left-80 h-[80vh- w-[59vw]' fill='blue'/>
-      </div>
-
-      <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.03]  flex items-center justify-center absolute top-0 left-0">
-      {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
-     
-      </div>
-
-      <div id='coresection' className='h-screen w-full flex justify-center relative py-10 px-5 mt-10 z-10'>
+ <div id='coresection' className='h-screen w-full flex justify-center relative py-10 px-5 mt-10'>
         <div className='w-full flex flex-col justify-left h-full gap-2  '>
           <div className='flex flex-col w-full h-full place-items-left my-3 mx-10 pl-40 '>
             <div className=''>
@@ -80,9 +41,3 @@ const CoreSection = () => {
 
         </div>
       </div>
-    </div>
-  )
-}
-
-export default CoreSection
-

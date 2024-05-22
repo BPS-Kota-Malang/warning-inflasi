@@ -3,11 +3,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { Spotlight } from './ui/spotlight'
-import { TextGenerateEffect } from './ui/TextGenerateEffect'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa'
-import Lookerstudio from './Lookerstudio'
-import Dropdown from './Dropdown';
 
 const CoreSection = () => {
 
@@ -18,10 +13,14 @@ const CoreSection = () => {
   
   /**Event Handling */
 
-  const handleSelectChange = (event) => {
+  // const handleSelectChange = (event) => {
+  //   setIframeSrc(event.target.value);
+  // };
+
+  /** Event Handling Chat GPT */
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setIframeSrc(event.target.value);
   };
-
 
   return (
     <div  className='pt-10  bg-black'>

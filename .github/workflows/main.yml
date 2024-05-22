@@ -1,5 +1,3 @@
-name: CI/CD with Next.js
-
 on:
   push:
     branches:
@@ -10,17 +8,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build the Next.js app
-      run: npm run build
+      - name: Build the Next.js app
+        run: npm run build
 
-    - name: Deploy to cPanel
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        deploy_key: ${{ secrets.DEPLOY_KEY }}
-        publish_dir: ./out
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to cPanel
+        run: |
+          scp -r ./out/* <USERNAME>@<HOST>:<REMOTE_DIR>

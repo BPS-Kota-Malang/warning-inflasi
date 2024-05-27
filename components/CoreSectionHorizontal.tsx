@@ -23,9 +23,9 @@ const CoreSectionHorizontal = () => {
   };
 
   return (
-    <div id='coresection' className='h-screen w-full flex justify-center relative z-10 py-20'>
-        <div className='w-full flex flex-col justify-left h-full gap-2 '>
-          <div className='flex flex-col w-full h-full place-items-left px-5 my-3'>
+    <div id='coresection' className='h-screen w-full flex justify-center relative z-10 py-3'>
+        <div className='w-full flex flex-col justify-left gap-2 '>
+          <div className='flex flex-col w-full h-full place-items-left 2xl:px-28 2xl:pt-10 y-3'>
               <h1 className='font-sans font-extrabold md:tracking-wider mb-4 text-base md:text-lg lg:text-2xl'>Pilih Komoditas</h1>
               <select onChange={handleSelectChange}>
               <option value="https://lookerstudio.google.com/embed/reporting/3480de0a-2239-41bd-99a3-234ac4703f9d/page/SoLyD">Bawang Merah</option>
@@ -56,7 +56,7 @@ const CoreSectionHorizontal = () => {
               {/** 
                  Iframe
               */}
-              <iframe className='w-full h-3/4'
+              <iframe className='w-full h-full'
               src={iframeSrc}
               height= '90%'
               width= '90%'

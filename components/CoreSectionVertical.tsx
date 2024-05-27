@@ -25,7 +25,7 @@ const CoreSectionVertical = () => {
   return (
     <div id='coresection' className='h-screen w-full flex justify-center relative z-10'>
         <div className='w-full flex flex-col justify-left h-full gap-2 '>
-          <div className='flex flex-col w-full h-1/3 place-items-left px-5 my-3 mx-0 lg:pl-40 md:pl-0 sm:pl-0'>
+          <div className='flex flex-col w-full h-1/3 place-items-left px-5 my-3 mx-0 lg:pl-40 md:pl-0 sm:pl-0 border rounded-md border-white-200/[.6]'>
               <h1 className='font-sans font-bold md:tracking-wider mb-4 text-base md:text-lg lg:text-2xl'>Pilih Komoditas Bahan Pokok</h1>
               <select onChange={handleSelectChange}>
                 <option value="https://lookerstudio.google.com/embed/reporting/a9feab30-f48c-4099-997c-dd89a0780405/page/SoLyD">Beras</option>
@@ -43,18 +43,17 @@ const CoreSectionVertical = () => {
               {/** 
                  Iframe
               */}
-              <iframe className='w-full h-full'
-              src={iframeSrc}
-              // height= '90%'
-              // width= '90%'
-              style = {{ border: 'none', marginTop: '20px' }}
-              title = "Dynamic Iframe"
-            />
-            
-
+                <iframe className='flex-grow mt-2'
+                src={iframeSrc}
+                title = "Dynamic Iframe"
+              />
             
           </div>
-          <div className='flex flex-col w-full h-1/3 place-items-left px-5 my-3 mx-0 lg:pl-40 md:pl-0 sm:pl-0'>
+
+          {/* /**
+              Subsection 2
+           */}
+          <div className='flex flex-col w-full h-1/3 place-items-left px-5 my-3 mx-0 lg:pl-40 md:pl-0 sm:pl-0 border rounded-md border-white-200/[.6]'>
               <h1 className='font-sans font-bold md:tracking-wider mb-4 text-base md:text-lg lg:text-2xl'>Pilih Komoditas Sayur dan Buah</h1>
               <select onChange={handleSelectChange}>
                 <option value="https://lookerstudio.google.com/embed/reporting/3480de0a-2239-41bd-99a3-234ac4703f9d/page/SoLyD">Bawang Merah</option>
@@ -68,18 +67,17 @@ const CoreSectionVertical = () => {
               {/** 
                  Iframe
               */}
-              <iframe className='w-full h-full'
+              <iframe className='flex-grow mt-2'
               src={iframeSrc}
               // height= '90%'
               // width= '90%'
-              style = {{ border: 'none', marginTop: '20px' }}
               title = "Dynamic Iframe"
             />
             
 
             
           </div>
-          <div className='flex flex-col w-full h-1/3 place-items-left px-5 my-3 mx-0 lg:pl-40 md:pl-0 sm:pl-0'>
+          <div className='flex flex-col w-full h-1/3 place-items-left px-5 my-3 mx-0 lg:pl-40 md:pl-0 sm:pl-0 border rounded-md border-white-200/[.6]'>
               <h1 className='font-sans font-bold md:tracking-wider mb-4 text-base md:text-lg lg:text-2xl'>Pilih Komoditas Ikan dan Daging</h1>
               <select onChange={handleSelectChange}>
                 <option value="https://lookerstudio.google.com/embed/reporting/b2bba04c-c581-4261-a225-221889035dde/page/SoLyD">Daging Ayam Ras</option>
@@ -91,11 +89,10 @@ const CoreSectionVertical = () => {
               {/** 
                  Iframe
               */}
-              <iframe className='w-full h-full'
+              <iframe className='flex-grow mt-2'
               src={iframeSrc}
               // height= '90%'
               // width= '90%'
-              style = {{ border: 'none', marginTop: '20px' }}
               title = "Dynamic Iframe"
             />
             

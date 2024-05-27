@@ -2,8 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white text-center py-4">
-      <p className="text-sm">&copy; {new Date().getFullYear()} Build by Bima Sakti Krisdianto. All rights reserved.</p>
+    <footer className="bg-gray-800 text-white py-4">
+      <div className="container mx-auto text-center">
+        <p className="text-sm">&copy; {new Date().getFullYear()} BPS Kota Malang. All rights reserved.</p>
+        <p className="text-sm">Developed by Bima Sakti Krisdianto</p>
+      </div>
     </footer>
   )
 }

@@ -3,6 +3,7 @@ import { Spotlight } from './ui/spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
+import CoreSection from './CoreSection'
 
 
 const Hero = () => {
@@ -34,25 +35,21 @@ const Hero = () => {
           <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
               Sebuah inovasi sederhana BPS Kota Malang untuk mengendalikan Inflasi
           </p>
-          
-          <div className='flex flex-col gap-5 mt-10 lg:flex-row lg:gap-10'>
-            <a href='#coresection'>
-              <MagicButton
-                title="Inflasi Komoditas"
-                icon={<FaLocationArrow/>}
-                position='right'
-              />
-            </a>
-            <a href='#inflasisection'>
-              <MagicButton
-                title="Inflasi Kota Malang"
-                icon={<FaLocationArrow/>}
-                position='right'
-              />
-            </a>
 
-          </div>
-            
+          <a href='#coresection'>
+            <MagicButton
+              title="Inflasi Komoditas"
+              icon={<FaLocationArrow/>}
+              position='right'
+            />
+          </a>
+          <a href='#coresection'>
+            <MagicButton
+              title="Inflasi Komoditas"
+              icon={<FaLocationArrow/>}
+              position='right'
+            />
+          </a>
         </div>
       </div>
 
